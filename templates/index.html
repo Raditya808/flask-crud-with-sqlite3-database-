@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DATABASE FILE</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Perdagangan Barang Dan Manusia</h1>
+  <table border="1px">
+    <tr>
+      <th>Nomor</th>
+      <th>Nama</th>
+      <th>Harga</th>
+      <th>Ubah</th>
+      <th>Hapus</th>
+      <th>Tambah</th>
+    </tr>
+    <!-- jinja syntax pake id karena function ubah dan hapus memiliki id-->
+    {% for i in container%}
+    <tr>
+      <td>{{i.nomor}}</td>
+      <td>{{i.nama}}</td>
+      <td>{{i.harga}}</td>
+      <td><a href="{{ url_for('ubah', id=i.nomor) }}">Ubah data</a></td>
+      <td><a href="{{url_for('hapus',id=i.nomor)}}">Hapus</a></td>
+      {%endfor%}
+      <td>
+        <a href="{{url_for('tambah')}}">Tambah data</a>
+      </td>
+ 
+    </tr>
+  </table>
+
+
+</body>
+
+</html>
