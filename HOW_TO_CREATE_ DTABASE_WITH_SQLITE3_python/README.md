@@ -1,4 +1,4 @@
-# CODE
+# CODE From Terminal
 
 
 <img src="python_SQLITE3.png" width="500">
