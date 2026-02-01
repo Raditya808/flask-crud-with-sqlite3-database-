@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fef3f2 0%, #fce7db 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #7c2d12;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-collapse: collapse;
+  animation: fadeInUp 1s ease;
+  border: none !important;
+}
+
+table th,
+table td {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+th {
+  background: #ea580c;
+  color: white;
+  padding: 20px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  border: none !important;
+}
+
+td {
+  padding: 18px 20px;
+  text-align: center;
+  border: none !important;
+  border-bottom: 1px solid #fed7aa !important;
+  color: #78350f;
+  transition: all 0.3s ease;
+}
+
+tr:last-child td {
+  border-bottom: none !important;
+}
+
+tr:hover td {
+  background: #fff7ed;
+}
+
+tr {
+  transition: all 0.3s ease;
+}
+
+tr button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: none;
+  animation: none;
+  margin: 0;
+}
+
+tr button:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+tr button:active {
+  transform: none;
+}
+
+td a {
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+td a:hover {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.button_navigation {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background: #ea580c;
+  border: 2px solid #ea580c;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.15);
+  transition: all 0.3s ease;
+  animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(234, 88, 12, 0.25);
+  background: #c2410c;
+  border-color: #c2410c;
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+button a {
+  display: block;
+  padding: 12px 28px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  color: #78350f;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+footer p {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+footer p:hover {
+  opacity: 1;
+}

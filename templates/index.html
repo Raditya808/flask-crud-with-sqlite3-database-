@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DATABASE FILE</title>
-  <link href="css/style.css" rel="stylesheet">
+  <title>DB</title>
+  <link rel="stylesheet" href="static/index.css"> 
 </head>
-
 <body>
-  <h1>Perdagangan Barang Dan Manusia</h1>
-  <table border="1px">
+  <h1>Welcome To Crud Using These Stack</h1>
+  <div class="image-container">
+    <img src='static/flaskstack.png' alt="flask">
+  </div>
+  <table>
     <tr>
-      <th>Nomor</th>
-      <th>Nama</th>
-      <th>Harga</th>
+      <th>nomor</th>
+      <th>nama</th>
+      <th>harga</th>
       <th>Ubah</th>
       <th>Hapus</th>
-      <th>Tambah</th>
     </tr>
-    <!-- jinja syntax pake id karena function ubah dan hapus memiliki id-->
-    {% for i in container%}
+    {% for tes in container%}
     <tr>
-      <td>{{i.nomor}}</td>
-      <td>{{i.nama}}</td>
-      <td>{{i.harga}}</td>
-      <td><a href="{{ url_for('ubah', id=i.nomor) }}">Ubah data</a></td>
-      <td><a href="{{url_for('hapus',id=i.nomor)}}">Hapus</a></td>
-      {%endfor%}
-      <td>
-        <a href="{{url_for('tambah')}}">Tambah data</a>
-      </td>
- 
+      <td>{{tes.nomor}}</td>
+      <td>{{tes.nama}}</td>
+      <td>{{tes.harga}}</td>
+      <td><a href="{{url_for('ubah',id=tes.nomor)}}">Ubah</a></td>
+      <td><a href="{{url_for('hapus',id=tes.nomor)}}">Hapus</a></td>
     </tr>
+    {%endfor%}
   </table>
-
-
+  <div class="button_navigation">
+    <button>
+      <a href="{{url_for('tambah')}}">Tambah</a>
+    </button>
+  </div>
+  <footer>
+    <p>Raditya 2026</p>
+  </footer>
 </body>
-
 </html>
