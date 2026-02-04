@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DB</title>
   <link rel="stylesheet" href="static/index.css"> 
 </head>
@@ -9,6 +10,8 @@
   <div class="image-container">
     <img src='static/flaskstack.png' alt="flask">
   </div>
+
+  <div class="table-wrapper">
   <table>
     <tr>
       <th>nomor</th>
@@ -27,9 +30,13 @@
     </tr>
     {%endfor%}
   </table>
+</div>
   <div class="button_navigation">
     <button>
       <a href="{{url_for('tambah')}}">Tambah</a>
+    </button>
+    <button>
+      <a href="https://github.com/Raditya808/flask-crud-with-sqlite3-database-">About Dev</a>
     </button>
   </div>
   <footer>
