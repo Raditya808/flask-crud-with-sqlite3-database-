@@ -1,5 +1,10 @@
 # Flask SQLite3 Database
-![Bochi](./assets/bochi.png)
+
+
+
+
+<img src="static/bochi.jpg" height="200px">
+
 
 Making Simple Database — But idk if it's safe or not.
 
